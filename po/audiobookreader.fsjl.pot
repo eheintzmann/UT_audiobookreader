@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiobookreader.fsjl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 19:52+0000\n"
+"POT-Creation-Date: 2024-02-28 20:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:44 audiobookreader.desktop.in.h:1
+#: ../qml/Main.qml:51 audiobookreader.desktop.in.h:1
 msgid "AudioBookReader"
 msgstr ""
 
-#: ../qml/Main.qml:98
+#: ../qml/Main.qml:105
 msgid "Press the button below and check the logs!"
 msgstr ""
 
-#: ../qml/Main.qml:103
+#: ../qml/Main.qml:110
 msgid "Bookmark"
 msgstr ""
 
-#: ../qml/Main.qml:114
+#: ../qml/Main.qml:121
 msgid "Play Bookmark"
+msgstr ""
+
+#: ../qml/Main.qml:129
+msgid "Open File"
 msgstr ""
