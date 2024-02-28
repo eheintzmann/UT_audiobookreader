@@ -24,6 +24,8 @@ import Example 1.0
 
 import QtMultimedia 5.11
 
+import Lomiri.Content 1.0
+
 
 MainView {
     id: root
@@ -35,6 +37,11 @@ MainView {
     height: units.gu(75)
 
     property var bookmark 
+    property var filePicker: lomiriFilePicker.createObject(root)
+
+    readonly property Component lomiriFilePicker :
+    Qt.createComponent("qrc:/LomiriFilePicker.qml",
+                        Component.PreferSynchronous);
 
     Page {
         anchors.fill: parent
@@ -115,6 +122,13 @@ MainView {
                 onClicked: {
                     audio.seek(root.bookmark)
                     audio.play()
+                }
+            }
+            Button {
+                Layout.alignment: Qt.AlignHCenter
+                text: i18n.tr('Open File')
+                onClicked: {
+                    filePicker.open()
                 }
             }
 
