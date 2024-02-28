@@ -1,0 +1,15 @@
+{
+    "name": "audiobookreader.fsjl",
+    "description": "Audio Book Reader",
+    "architecture": "@CLICK_ARCH@",
+    "title": "AudioBookReader",
+    "hooks": {
+        "audiobookreader": {
+            "apparmor": "audiobookreader.apparmor",
+            "desktop":  "audiobookreader.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "fsjl <digitaleservice@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
