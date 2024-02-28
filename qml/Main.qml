@@ -22,6 +22,9 @@ import Qt.labs.settings 1.0
 
 import Example 1.0
 
+import QtMultimedia 5.11
+
+
 MainView {
     id: root
     objectName: 'mainView'
@@ -31,6 +34,8 @@ MainView {
     width: units.gu(45)
     height: units.gu(75)
 
+    property var bookmark 
+
     Page {
         anchors.fill: parent
 
@@ -38,13 +43,20 @@ MainView {
             id: header
             title: i18n.tr('AudioBookReader')
         }
+        Audio{
+            id: audio
+
+        }
         ListModel{
             id: audiobooksmodel
             ListElement{
-                title: "audiobook"
+                title: "chapter1"
                 audioSource: "https://samples-files.com/samples/Audio/ogg/sample-file-1.ogg"
-
-
+                
+            }
+            ListElement{
+                title: "chapter2"
+                audioSource: "https://samples-files.com/samples/Audio/ogg/sample-file-2.ogg"
             }
         }
         ListView{
@@ -56,7 +68,11 @@ MainView {
             delegate: ListItem{
                 Label{
                     text: title
-                    
+
+                }
+                onClicked:{
+                    audio.source = audioSource
+                    audio.play()
                 }
             }
             
@@ -84,8 +100,22 @@ MainView {
 
             Button {
                 Layout.alignment: Qt.AlignHCenter
-                text: i18n.tr('Press here!')
-                onClicked: Example.speak()
+                text: i18n.tr('Bookmark')
+                onClicked: {
+                    root.bookmark = audio.position
+                    console.log("test")
+                    console.log(root.bookmark)
+                    audio.stop()
+                }
+            }
+
+            Button {
+                Layout.alignment: Qt.AlignHCenter
+                text: i18n.tr('Play Bookmark')
+                onClicked: {
+                    audio.seek(root.bookmark)
+                    audio.play()
+                }
             }
 
             Item {
