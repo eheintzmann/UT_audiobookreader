@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiobookreader.fsjl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 19:03+0000\n"
+"POT-Creation-Date: 2024-02-28 19:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,10 @@ msgstr ""
 msgid "AudioBookReader"
 msgstr ""
 
-#: ../qml/Main.qml:59
+#: ../qml/Main.qml:82
 msgid "Press the button below and check the logs!"
 msgstr ""
 
-#: ../qml/Main.qml:64
+#: ../qml/Main.qml:87
 msgid "Press here!"
 msgstr ""

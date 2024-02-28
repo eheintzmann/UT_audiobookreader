@@ -38,6 +38,29 @@ MainView {
             id: header
             title: i18n.tr('AudioBookReader')
         }
+        ListModel{
+            id: audiobooksmodel
+            ListElement{
+                title: "audiobook"
+                audioSource: "https://samples-files.com/samples/Audio/ogg/sample-file-1.ogg"
+
+
+            }
+        }
+        ListView{
+            model: audiobooksmodel
+            anchors{
+                fill: parent
+                topMargin: header.height
+            }
+            delegate: ListItem{
+                Label{
+                    text: title
+                    
+                }
+            }
+            
+        }
 
         ColumnLayout {
             spacing: units.gu(2)
